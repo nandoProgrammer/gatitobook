@@ -3,7 +3,7 @@ import { Observable, tap } from 'rxjs';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
-import { TokenService } from './token-service';
+import { TokenService } from './token.service';
 
 const API = environment.apiURL;
 
