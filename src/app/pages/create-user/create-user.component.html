@@ -1,33 +1,28 @@
-<form >
+<form [formGroup]="novoUsuarioForm" (ngSubmit)="cadastrar()">
     <div class="form-group">
       <label for="exampleInputEmail1">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" caria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Usuário inválido</small>
+      <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" caria-describedby="emailHelp" placeholder="Enter email">
+      <small *ngIf="fUserForm('email').errors && fUserForm('email').touched" id="emailHelp" class="form-text text-muted">Email inválido</small>
     </div>
 
     <div class="form-group">
       <label for="exampleInputUserl1">Usuário</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" caria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Usuário inválido</small>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="userName" caria-describedby="emailHelp" placeholder="Enter email">
+      <small *ngIf="fUserForm('userName').errors && fUserForm('userName').touched" id="emailHelp" class="form-text text-muted">Usuário inválido</small>
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Nome</label>
-      <input type="text" class="form-control" id="exampleInputEmail1" caria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Usuário inválido</small>
+      <input type="text" class="form-control" id="exampleInputEmail1" formControlName="fullName" caria-describedby="emailHelp" placeholder="Enter email">
+      <small *ngIf="fUserForm('fullName').errors && fUserForm('fullName').touched" id="emailHelp" class="form-text text-muted">Nome inválido</small>
     </div>
 
     <div class="form-group">
       <label for="exampleInputEmail1">Senha</label>
-      <input type="password" class="form-control" id="exampleInputEmail1" caria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Usuário inválido</small>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputEmail1">Confirmar senha</label>
-      <input type="password" class="form-control" id="exampleInputEmail1" caria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">Usuário inválido</small>
+      <input type="password" class="form-control" id="exampleInputEmail1" formControlName="password" caria-describedby="emailHelp" placeholder="Enter email">
+      <small *ngIf="fUserForm('password').errors && fUserForm('password').touched" id="emailHelp" class="form-text text-muted">Senha inválida</small>
     </div>
     
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<a routerLink="/login">Home</a>

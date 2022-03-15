@@ -38,6 +38,10 @@ export class CreateUserComponent implements OnInit {
       });
   }
 
+  fUserForm(campo: string){
+    return this.novoUsuarioForm.get(campo)
+  }
+
   cadastrar() {
     if (this.novoUsuarioForm.valid) {
       const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario;
