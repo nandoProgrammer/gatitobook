@@ -7,12 +7,14 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
+import { AnimalComponent } from './pages/animal/animal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    AnimalComponent
   ],
   imports: [
     BrowserModule,
