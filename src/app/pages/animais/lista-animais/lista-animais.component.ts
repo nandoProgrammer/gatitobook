@@ -15,10 +15,10 @@ export class ListaAnimaisComponent implements OnInit {
   constructor(private usuarioService: TokenService, private animaisService: AnimaisService) { }
 
   ngOnInit(): void {
-    this.usuarioService.retornaToken().pipe(
+    this.animais$ = this.usuarioService.retornaToken().pipe(
       switchMap((usuario) => {
         const userName = usuario.name ?? ''; 
+        return this.animaisService.listaDoUsuario(userName)
       })
     )
-
 }
