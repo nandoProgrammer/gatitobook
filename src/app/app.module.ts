@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { AnimalComponent } from './pages/animal/animal.component';
+import { AnimaisComponent } from './pages/animais/animais.component';
+import { ListaAnimaisComponent } from './pages/lista-animais/lista-animais.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CreateUserComponent,
-    AnimalComponent
+    AnimalComponent,
+    AnimaisComponent,
+    ListaAnimaisComponent
   ],
   imports: [
     BrowserModule,
